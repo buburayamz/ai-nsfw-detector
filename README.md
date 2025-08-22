@@ -28,10 +28,13 @@ Namun file tersebut **sudah disensor** dan hanya digunakan sebagai **contoh inpu
 
 ### STEP 1 - (Windows)  
 Download Python versi terbaru (misalnya 3.13.7)  
-👉 [Download Python](https://www.python.org/downloads/)  
+👉 [Download Python For Windows](https://www.python.org/downloads/)  
+
+Download Git Bash versi terbaru
+👉 [Download Git Bash For Windows](https://git-scm.com/downloads/win)  
 
 ### STEP 2  
-Buat folder project dan masuk ke dalamnya:  
+Buat folder project dan masuk ke dalamnya (pake Terminal atau Git Bash):  
 ```bash
 mkdir nsfw-detector
 cd nsfw-detector
