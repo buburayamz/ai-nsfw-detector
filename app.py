@@ -11,6 +11,7 @@ import torch.nn.functional as F
 from io import BytesIO
 
 app = FastAPI()
+
 CACHE_FILE = "sudah_pernah_cek.txt"
 
 # --- fungsi buat hash file ---
@@ -38,33 +39,6 @@ processor = AutoImageProcessor.from_pretrained(
 model = AutoModelForImageClassification.from_pretrained("Falconsai/nsfw_image_detection")
 model.eval()
 
-@app.on_event("startup")
-def startup_event():
-    # Ambil host & port dari ENV (fallback ke default)
-    host = os.getenv("HOST", "127.0.0.1")
-    port = int(os.getenv("PORT", 8000))
-
-    sample_path = "/cek_nsfw?url=https://example.com/foto.jpg"
-
-    # local url
-    local_url = f"http://127.0.0.1:{port}{sample_path}"
-
-    # lan ip url
-    lan_ip = socket.gethostbyname(socket.gethostname())
-    lan_url = f"http://{lan_ip}:{port}{sample_path}"
-
-    # public ip url
-    try:
-        public_ip = requests.get("https://api.ipify.org").text.strip()
-        public_url = f"http://{public_ip}:{port}{sample_path}"
-    except:
-        public_url = "(gagal ambil IP publik)"
-
-    print("\n🚀 NSFW Detector API is running!")
-    print(f"   Local URL   : {local_url}")
-    print(f"   Network URL : {lan_url}")
-    print(f"   Public URL  : {public_url}\n")
-
 @app.get("/cek_nsfw")
 def cek_nsfw(url: str = Query(..., description="URL gambar untuk dicek")):
     start_time = time.perf_counter()
@@ -80,7 +54,7 @@ def cek_nsfw(url: str = Query(..., description="URL gambar untuk dicek")):
         # cek cache
         if file_hash in cache:
             label, conf = cache[file_hash]
-            elapsed = (time.perf_counter() - start_time)  # detik float
+            elapsed = (time.perf_counter() - start_time)
             elapsed_str = f"{elapsed:.1f}".replace(".", ",") + " Detik"
             print(f"[CACHE] {url} → {label} ({conf}%) in {elapsed_str}")
             return {
