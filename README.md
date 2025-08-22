@@ -55,7 +55,7 @@ pip install fastapi uvicorn[standard] requests
 ### STEP 5  
 Jalankan script untuk deteksi langsung:  
 ```bash
-python detect.py
+python detect.py 1.jpg
 ```
 
 ### STEP 6 (opsional, jalankan versi API)  
