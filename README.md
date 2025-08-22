@@ -34,10 +34,10 @@ Download Git Bash versi terbaru
 👉 [Download Git Bash For Windows](https://git-scm.com/downloads/win)  
 
 ### STEP 2  
-Buat folder project dan masuk ke dalamnya (pake Terminal atau Git Bash):  
+Clone project dan masuk ke dalamnya (pake Terminal atau Git Bash):  
 ```bash
-mkdir nsfw-detector
-cd nsfw-detector
+git clone https://github.com/buburayamz/ai-nsfw-detector
+cd ai-nsfw-detector
 ```
 
 ### STEP 3 (opsional, virtual environment)  
@@ -56,7 +56,7 @@ pip install fastapi uvicorn[standard] requests
 ```
 
 ### STEP 5  
-Jalankan script untuk deteksi langsung:  
+Jalankan script untuk deteksi langsung :  
 ```bash
 python detect.py 1.jpg
 ```
