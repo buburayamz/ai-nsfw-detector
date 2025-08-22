@@ -63,5 +63,5 @@ python detect.py 1.jpg
 
 ### STEP 6 (opsional, jalankan versi API)  
 ```bash
-uvicorn app:app --host 0.0.0.0 --port 8000
+python run.py --host 0.0.0.0 --port 8080
 ```
