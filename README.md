@@ -15,7 +15,7 @@ Cocok untuk integrasi ke aplikasi lain (misalnya **bot, sistem moderasi, atau we
 
 ## ⚡ Install & Menjalankan  
 
-### STEP 1  
+### STEP 1 - (Windows)  
 Download Python versi terbaru (misalnya 3.13.7)  
 👉 [Download Python](https://www.python.org/downloads/)  
 
@@ -30,6 +30,7 @@ cd nsfw-detector
 ```bash
 python -m venv venv
 source venv/Scripts/activate   # Windows
+source venv/bin/activate  # Ubuntu / Linux / macOS
 ```
 
 ### STEP 4  
