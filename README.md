@@ -13,6 +13,17 @@ Cocok untuk integrasi ke aplikasi lain (misalnya **bot, sistem moderasi, atau we
 
 ---
 
+## ⚠️ Peringatan Konten NSFW
+
+Di dalam repository ini terdapat file contoh **`1.jpg`** yang **mengandung konten NSFW (Not Safe For Work)**.  
+Namun file tersebut **sudah disensor** dan hanya digunakan sebagai **contoh input untuk keperluan pengujian deteksi NSFW**.  
+
+🔹 Mohon **berhati-hati** saat membuka file ini.  
+🔹 File ini **tidak dimaksudkan untuk konsumsi pribadi**, melainkan hanya untuk **tujuan teknis (testing / penelitian)**.  
+🔹 Jika tidak nyaman, silakan **abaikan atau hapus file `1.jpg`** dari direktori lokal Anda.  
+
+---
+
 ## ⚡ Install & Menjalankan  
 
 ### STEP 1 - (Windows)  
